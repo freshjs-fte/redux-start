@@ -1,14 +1,12 @@
 import ACTION_TYPES from "../actions/actionTypes";
 
-
 const initialState = {
   count: 0,
   step: 1,
   mode: true,
   /* 3. */
-  tasks: []
+  tasks: [],
 };
-
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
