@@ -15,9 +15,9 @@ export const counterDecrement = (data) => {
 };
 
 /* 6. */
-export const addTask = (data) => {
+export const addTaskRequest = (data) => {
   return {
-    type: ACTION_TYPES.ADD_TASK,
+    type: ACTION_TYPES.ADD_TASK_REQUESTED,
     data,
   };
 };

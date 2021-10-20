@@ -6,6 +6,8 @@ const initialState = {
   mode: true,
   /* 3. */
   tasks: [],
+  isLoading: false,
+  error: null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -18,10 +20,25 @@ const reducer = (state = initialState, action) => {
       return { ...state, count: state.count - 1 };
     }
 
-    /* 5. */
-    case ACTION_TYPES.ADD_TASK: {
-      return { ...state };
+    case ACTION_TYPES.ADD_TASK_REQUESTED: {
+      return { ...state, isLoading: true };
     }
+    case ACTION_TYPES.ADD_TASK_SUCCESSED: {
+      const newTasks = [];
+      newTasks.push(...state.tasks);
+      newTasks.push({
+        ...action.data,
+        // id: state.tasks.length
+      });
+
+      return {
+        ...state,
+        tasks: newTasks,
+        isLoading: false,
+      };
+    }
+    // TODO error case
+
     case ACTION_TYPES.DELETE_TASK: {
       return { ...state };
     }
