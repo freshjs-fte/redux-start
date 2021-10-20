@@ -1,0 +1,10 @@
+const ACTION_TYPES = {
+  INCREMENT: "INCREMENT",
+  DECREMENT: "DECREMENT",
+
+  /* 4. */
+  ADD_TASK: "ADD_TASK",
+  DELETE_TASK: "DELETE_TASK",
+};
+
+export default ACTION_TYPES;
