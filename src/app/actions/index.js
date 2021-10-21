@@ -1,29 +1,29 @@
 import ACTION_TYPES from "./actionTypes";
 
-export const counterIncrementAction = (data) => {
+export const counterIncrementAction = (payload) => {
   return {
     type: ACTION_TYPES.INCREMENT,
-    data,
+    payload,
   };
 };
 
-export const counterDecrementAction = (data) => {
+export const counterDecrementAction = (payload) => {
   return {
     type: ACTION_TYPES.DECREMENT,
-    data,
+    payload,
   };
 };
 
-export const addTaskAction = (data) => {
+export const addTaskAction = (payload) => {
   return {
     type: ACTION_TYPES.ADD_TASK_REQUESTED,
-    data,
+    payload,
   };
 };
 
-export const deleteTaskAction = (data) => {
+export const deleteTaskAction = (payload) => {
   return {
     type: ACTION_TYPES.DELETE_TASK,
-    data,
+    payload,
   };
 };
