@@ -3,7 +3,7 @@ import { addTaskAction } from "../../app/actions";
 import TaskListForm from "./TaskListForm";
 
 const TaskListContainer = (props) => {
-  const tasks = useSelector((state) => state.tasks);
+  const { list } = useSelector((state) => state.tasksSlice);
   const dispatch = useDispatch();
 
   return (
@@ -17,7 +17,7 @@ const TaskListContainer = (props) => {
       {/* <span>{props.isLoading ? "Loading ... " : ""}</span> */}
 
       <ul>
-        {tasks.map((task) => {
+        {list.map((task) => {
           return (
             <li key={task.id}>
               <input type="checkbox" value={task.isChecked} />
