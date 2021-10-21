@@ -14,6 +14,13 @@ export const counterDecrementAction = (payload) => {
   };
 };
 
+export const getTasksAction = (payload) => {
+  return {
+    type: ACTION_TYPES.GET_TASKS_REQUESTED,
+    payload,
+  };
+};
+
 export const addTaskAction = (payload) => {
   return {
     type: ACTION_TYPES.ADD_TASK_REQUESTED,
