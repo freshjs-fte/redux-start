@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { counterIncrement, counterDecrement } from "../../app/actions";
+import { counterIncrementAction, counterDecrementAction } from "../../app/actions";
 
 function Counter(props) {
   console.log(props);
@@ -10,14 +10,14 @@ function Counter(props) {
       <div>{props.count}</div>
       <button
         onClick={() => {
-          props.dispatch( counterIncrement(123) );
+          props.dispatch( counterIncrementAction(123) );
         }}
       >
         +
       </button>
       <button
         onClick={() => {
-          props.dispatch(counterDecrement());
+          props.dispatch(counterDecrementAction());
         }}
       >
         -

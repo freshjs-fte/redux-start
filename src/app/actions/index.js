@@ -14,7 +14,6 @@ export const counterDecrementAction = (data) => {
   };
 };
 
-/* 6. */
 export const addTaskAction = (data) => {
   return {
     type: ACTION_TYPES.ADD_TASK_REQUESTED,
