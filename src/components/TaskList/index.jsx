@@ -1,33 +1,20 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTaskAction } from "../../app/actions";
+import TaskListForm from "./TaskListForm";
 
 const TaskListContainer = (props) => {
-  console.log(props);
-
   const tasks = useSelector((state) => state.tasks);
   const dispatch = useDispatch();
 
-  const [taskText, setTaskText] = useState("");
-  const handleChange = ({ target: { value } }) => {
-    setTaskText(value);
-  };
   return (
     <div>
-      <input
-        type="text"
-        name="taskText"
-        value={taskText}
-        onChange={handleChange}
-      />
-      <button
-        onClick={() => {
-          const newTask = { text: taskText, isChecked: false };
-          dispatch(addTaskAction(newTask))
+      <TaskListForm
+        onSubmit={(values) => {
+          const newTask = { title: values.title };
+          dispatch(addTaskAction(newTask));
         }}
-      >
-        Добавить таску
-      </button>
+      />
       {/* <span>{props.isLoading ? "Loading ... " : ""}</span> */}
 
       <ul>
