@@ -1,13 +1,13 @@
 import ACTION_TYPES from "./actionTypes";
 
-export const counterIncrement = (data) => {
+export const counterIncrementAction = (data) => {
   return {
     type: ACTION_TYPES.INCREMENT,
     data,
   };
 };
 
-export const counterDecrement = (data) => {
+export const counterDecrementAction = (data) => {
   return {
     type: ACTION_TYPES.DECREMENT,
     data,
@@ -15,14 +15,14 @@ export const counterDecrement = (data) => {
 };
 
 /* 6. */
-export const addTaskRequest = (data) => {
+export const addTaskAction = (data) => {
   return {
     type: ACTION_TYPES.ADD_TASK_REQUESTED,
     data,
   };
 };
 
-export const deleteTask = (data) => {
+export const deleteTaskAction = (data) => {
   return {
     type: ACTION_TYPES.DELETE_TASK,
     data,
